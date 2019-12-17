@@ -79,18 +79,18 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Answer Explanation</td>
-                            <td>
-                            {!! $result->question->answer_explanation  !!}
-                                @if ($result->question->more_info_link != '')
-                                    <br>
-                                    <br>
-                                    Read more:
-                                    <a href="{{ $result->question->more_info_link }}" target="_blank">{{ $result->question->more_info_link }}</a>
-                                @endif
-                            </td>
-                        </tr>
+{{--                        <tr>--}}
+{{--                            <td>Answer Explanation</td>--}}
+{{--                            <td>--}}
+{{--                            {!! $result->question->answer_explanation  !!}--}}
+{{--                                @if ($result->question->more_info_link != '')--}}
+{{--                                    <br>--}}
+{{--                                    <br>--}}
+{{--                                    Read more:--}}
+{{--                                    <a href="{{ $result->question->more_info_link }}" target="_blank">{{ $result->question->more_info_link }}</a>--}}
+{{--                                @endif--}}
+{{--                            </td>--}}
+{{--                        </tr>--}}
                     </table>
                 <?php $i++ ?>
                 @endforeach

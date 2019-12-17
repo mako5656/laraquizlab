@@ -62,7 +62,7 @@ class ResultsController extends Controller
 
             //定数K：イロレーティングの確率モデルK=32を3PLMの確率モデルに変換したもの。$K=0.1842
             $arg = log(10);
-            $K = 32 / 400 * $arg;
+            $K = 2 * (32 / 400) * $arg;
 
             //偶然正解してしまう確率$cj=0.25
             $qnumber = 4;

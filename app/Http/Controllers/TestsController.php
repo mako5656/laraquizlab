@@ -49,34 +49,86 @@ class TestsController extends Controller
 
 //        $questions = Question::whereIn('category_name',[0000])->inRandomOrder()->limit(5)->get();//0から1問0.0168で5問正解すると0.0813
 //        $questions = Question::whereIn('category_name',[0001])->inRandomOrder()->limit(5)->get();//0から5問正解すると0.5854
-//          $questions = Question::whereIn('category_name',[1])->inRandomOrder()->limit(5)->get();
-        if($userability == 0.00){
-            $questions1 = Question::whereIn('category_name',[0])->inRandomOrder()->limit(1);
-            $questions2 = Question::whereIn('category_name',[1])->inRandomOrder()->limit(1);
-            $questions3 = Question::whereIn('category_name',[10])->inRandomOrder()->limit(1);
-            $questions4 = Question::whereIn('category_name',[100])->inRandomOrder()->limit(1);
-            $questions5 = Question::whereIn('category_name',[1000])->inRandomOrder()->limit(1);
-            $questions = $questions1->union($questions2)->union($questions3)->union($questions4)->union($questions5)->get();
-        }elseif($userability <= 0){
-            $questions1 = Question::whereIn('category_name',[0])->inRandomOrder()->limit(2);
-            $questions2 = Question::whereIn('category_name',[1])->inRandomOrder()->limit(2);
-            $questions3 = Question::whereIn('category_name',[10])->inRandomOrder()->limit(1);
-            $questions = $questions1->union($questions2)->union($questions3)->get();
-        }elseif($userability > 0 and $userability<0.7){
-            $questions1 = Question::whereIn('category_name',[1])->inRandomOrder()->limit(1);
-            $questions2 = Question::whereIn('category_name',[10])->inRandomOrder()->limit(1);
-            $questions3 = Question::whereIn('category_name',[111])->inRandomOrder()->limit(1);
-            $questions3 = Question::whereIn('category_name',[1100])->inRandomOrder()->limit(1);
-            $questions3 = Question::whereIn('category_name',[1010])->inRandomOrder()->limit(1);
-            $questions = $questions1->union($questions2)->union($questions3)->get();
-        }elseif($userability >= 0.7){
-            $questions1 = Question::whereIn('category_name',[11])->inRandomOrder()->limit(1);
-            $questions2 = Question::whereIn('category_name',[101])->inRandomOrder()->limit(1);
-            $questions3 = Question::whereIn('category_name',[1000])->inRandomOrder()->limit(1);
-            $questions4 = Question::whereIn('category_name',[1100])->inRandomOrder()->limit(1);
-            $questions5 = Question::whereIn('category_name',[1011])->inRandomOrder()->limit(1);
-            $questions = $questions1->union($questions2)->union($questions3)->union($questions4)->union($questions5)->get();
+//         $questions = Question::whereIn('category_name',[1])->inRandomOrder()->limit(5)->get();
+        $level1 =-2.0;
+        $level2 =-0.4;
+        $level3 =1.2;
+        $level4 =3.05;
+        $level5 = 4;
+        $level6 = 6;
+        $lil = [2,1,0,0,0];
+        $lim = [3,4,5,4,3];
+        $lir = [0,0,0,1,2];
+
+        if($userability < $level1 or $userability >= $level6){
+            $questions = Question::inRandomOrder()->limit(5)->get();
+        }elseif($userability >= $level1 and $userability < $level2){
+            $dis=abs(($level1-$level2)/5);
+            $range=$level1;
+            for($i=0;$i<5;$i++){
+                $range+=$dis;
+                if($userability<$range){
+                    $questions1 = Question::inRandomOrder()->limit($lil[$i]);
+                    $questions2 = Question::whereBetween('item_difficulty', [-1.6,-1.5])->inRandomOrder()->limit($lim[$i]);
+                    $questions3 = Question::whereBetween('item_difficulty', [0.7, 0.9])->inRandomOrder()->limit($lir[$i]);
+                    $questions = $questions2->union($questions3)->union($questions1)->get();
+                    break;
+                }
+            }
+        }elseif($userability >= $level2 and $userability < $level3){//kの値2倍で能力値0から5問全問正解で0.7710
+            $dis=abs(($level2-$level3)/5);
+            $range=$level2;
+            for($i=0;$i<5;$i++){
+                $range= $range + $dis;
+                if($userability < $range){
+                    $questions1 = Question::whereBetween('item_difficulty', [-1.6,-1.5])->inRandomOrder()->limit($lil[$i]);
+                    $questions2 = Question::whereBetween('item_difficulty', [0.7, 0.9])->inRandomOrder()->limit($lim[$i]);
+                    $questions3 = Question::whereBetween('item_difficulty', [1.6,2.1])->inRandomOrder()->limit($lir[$i]);
+                    $questions = $questions1->union($questions2)->union($questions3)->get();
+                    break;
+                }
+            }
+        }elseif($userability >= $level3 and $userability < $level4){
+            $dis=abs(($level3-$level4)/5);
+            $range=$level3;
+            for($i=0;$i<5;$i++){
+                $range+=$dis;
+                if($userability<$range){
+                    $questions1 = Question::whereBetween('item_difficulty', [0.7,0.9])->inRandomOrder()->limit($lil[$i]);
+                    $questions2 = Question::whereBetween('item_difficulty', [1.6,2.1])->inRandomOrder()->limit($lim[$i]);
+                    $questions3 = Question::whereBetween('item_difficulty', [4,4.1])->inRandomOrder()->limit($lir[$i]);
+                    $questions = $questions1->union($questions2)->union($questions3)->get();
+                    break;
+                }
+            }
+        }elseif($userability >= $level4 and $userability < $level5){
+            $dis=abs(($level4-$level5)/5);
+            $range=$level4;
+            for($i=0;$i<5;$i++){
+                $range+=$dis;
+                if($userability<$range){
+                    $questions1 = Question::whereBetween('item_difficulty', [1.6,2.1])->inRandomOrder()->limit($lil[$i]);
+                    $questions2 = Question::whereBetween('item_difficulty', [4,4.1])->inRandomOrder()->limit($lim[$i]);
+                    $questions3 = Question::whereBetween('item_difficulty', [5.3,5.1])->inRandomOrder()->limit($lir[$i]);
+                    $questions = $questions1->union($questions2)->union($questions3)->get();
+                    break;
+                }
+            }
+        }elseif($userability >= $level5 and $userability < $level6){
+            $dis=abs(($level4-$level5)/5);
+            $range=$level4;
+            for($i=0;$i<5;$i++){
+                $range+=$dis;
+                if($userability<$range){
+                    $questions1 = Question::whereBetween('item_difficulty', [4,4.1])->inRandomOrder()->limit($lil[$i]);
+                    $questions2 = Question::whereBetween('item_difficulty', [5.3,5.1])->inRandomOrder()->limit($lim[$i]);
+                    $questions3 = Question::inRandomOrder()->limit($lir[$i]);
+                    $questions = $questions1->union($questions2)->union($questions3)->get();
+                    break;
+                }
+            }
         }
+//        $questions = Question::inRandomOrder()->limit(5)->get();
 
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();

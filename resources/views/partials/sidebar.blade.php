@@ -8,14 +8,14 @@
 
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
-                    <i class="fa fa-gears"></i>
+                    <i class="fa fa-pencil-square-o"></i>
                     <span class="title">@lang('quickadmin.test.new')</span>
                 </a>
             </li>
 
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
-                    <i class="fa fa-gears"></i>
+                    <i class="fa fa-history"></i>
                     <span class="title">@lang('quickadmin.results.title')</span>
                 </a>
             </li>
@@ -73,6 +73,14 @@
                 </ul>
             </li>
             @endif
+            <li>
+                <a href="{{ url('/home') }}">
+                    <i class="fa fa-line-chart"></i>
+                    <span class="title">
+                        Ability transition
+                    </span>
+                </a>
+            </li>
             <li>
                 <a href="#logout" onclick="$('#logout').submit();">
                     <i class="fa fa-arrow-left"></i>

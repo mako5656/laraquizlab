@@ -53,6 +53,9 @@
                             <td>Options</td>
                             <td>
                                 <ul>
+                                    @if($result->question_id > 160)
+                                        <p>一般解</p>
+                                    @endif
                                     <label class="radio-inline">
                                         @foreach($result->question->options as $option)
                                             <li style="@if ($option->correct == 1) font-weight: bold; @endif
@@ -63,7 +66,7 @@
                                             </li>
                                         @endforeach
                                     </label>
-                                    @if($result->question_id > 180)
+                                    @if($result->question_id > 160)
                                         <p></p><p>特殊解</p>
                                         <label class="radio-inline">
                                         @foreach($result->question->options as $option)

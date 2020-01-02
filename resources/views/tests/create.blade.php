@@ -3,7 +3,7 @@
 
 @section('content')
     {{--    <h3 class="page-title">@lang('quickadmin.laravel-quiz')</h3>--}}
-    <h3 class="page-title">New Differential equation quiz</h3>
+    <h3 class="page-title">New Differential equation question</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['tests.store']]) !!}
     <?php //dd($questions)
     $level1 =-2.0;
@@ -16,7 +16,8 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('quickadmin.quiz')
+{{--            @lang('quickadmin.quiz')--}}
+            Answer these 5 questions.
 
             {{--ability表示追加--}}
             <br><div>ユーザの能力値：

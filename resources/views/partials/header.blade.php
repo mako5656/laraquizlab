@@ -3,7 +3,8 @@
         <div class="navbar-header">
             <a href="{{ url('/') }}"
                class="navbar-brand">
-                @lang('quickadmin.quickadmin_title')
+{{--                @lang('quickadmin.quickadmin_title')--}}
+                微分方程式 演習問題 自動出題システム
             </a>
         </div>
         <a href="javascript:;"

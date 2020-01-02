@@ -9,14 +9,16 @@
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
                     <i class="fa fa-pencil-square-o"></i>
-                    <span class="title">@lang('quickadmin.test.new')</span>
+{{--                    <span class="title">@lang('quickadmin.test.new')</span>--}}
+                    <span class="title">新しい演習問題</span>
                 </a>
             </li>
 
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-history"></i>
-                    <span class="title">@lang('quickadmin.results.title')</span>
+{{--                    <span class="title">@lang('quickadmin.results.title')</span>--}}
+                    <span class="title">解答履歴</span>
                 </a>
             </li>
 
@@ -77,20 +79,22 @@
                 <a href="{{ url('/home') }}">
                     <i class="fa fa-line-chart"></i>
                     <span class="title">
-                        Ability transition
+{{--                        Ability transition--}}
+                        能力推移
                     </span>
                 </a>
             </li>
             <li>
                 <a href="#logout" onclick="$('#logout').submit();">
                     <i class="fa fa-arrow-left"></i>
-                    <span class="title">@lang('quickadmin.logout')</span>
+{{--                    <span class="title">@lang('quickadmin.logout')</span>--}}
+                    <span class="title">ログアウト</span>
                 </a>
             </li>
         </ul>
         <div class="text-center margin-top-20" style="color: white">
-            KONAKALAB<br>
-            <a href="mailto:konaka＠meijo-u.ac.jp" target="_blank">konaka＠meijo-u.ac.jp</a>
+            IKAMI MAKOTO<br>
+            <a href="mailto:160441006@ccmailg.meijo-u.ac.jp" target="_blank">160441006@ccmailg.meijo-u.ac.jp</a>
         </div>
 
 {{--        <div class="text-center margin-top-20" style="color: white">--}}

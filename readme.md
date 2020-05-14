@@ -1,51 +1,18 @@
-# LaraQuiz: Laravel 5.6 based quiz system
+# 項目応答理論を用いた演習問題出題システム(Laravel)
+研究背景：学校教育におけるデジタル化の開発が海外と比べて遅れており、2020年度から文部科学省が「デジタル教科書」を全国の小中高校で使えるようにするとの中間報告をまとめている。
 
-It is a demo project for demonstrating what can be generated with [QuickAdminPanel](https://quickadminpanel.com) tool.
-LaraQuiz was mostly generated with __QuickAdmin__ except for some custom code.
+研究目的：現在では英語分野(TOEICなど)などに項目応答理論が用いられた演習問題出題システムが多いが、数学分野の特に大学生向けの出題システムについてはないことから作成しました。
 
-It's an open-source version of online Laravel quiz at [LaraQuiz.com](http://laraquiz.com) - but the system can be used for any quiz project, you just fill in different topics and questions.
+研究内容：項目応答理論を用いた問題出題システムをWeb上で実装し、実際に大学生に利用してもらいアンケート調査を行いました。
 
-__Notice__: originally created with Laravel 5.3, it was upgraded to Laravel 5.6 in March 2018.
+実装言語・使用ツール等：Python,PHP,MySQL,Chart.js
 
-## Clickable live-demo
 
-[demo-laraquiz.quickadminpanel.com](http://demo-laraquiz.quickadminpanel.com)
+## デモ
 
-- __Email__: admin@admin.com
+[https://knmk.jpn.org](https://knmk.jpn.org)
+
+- __Email__: sample@sample.com
 - __Pass__: password
 
-![LaraQuiz screenshot](https://quickadminpanel.com/assets/pages/demos/demo-laraquiz-01.png)
 
-![LaraQuiz screenshot 2](https://quickadminpanel.com/assets/pages/demos/demo-laraquiz-02.png)
-
-## How to use
-
-#### Using Docker
-- Clone the repository with __git clone__
-- Run __make setup__
-- Access via __http://localhost:8888__
-
-#### Without Docker
-- Clone the repository with __git clone__
-- Copy __.env.example__ file to __.env__ and edit database credentials there
-- Run __composer install__
-- Run __php artisan key:generate__
-- Run __php artisan migrate --seed__ (it has some seeded data for your testing)
-- Now you can login as admin: launch the main URL and login with default credentials __admin@admin.com__ - __password__
-- Fill in the database with topics, questions and options
-- For social login - fill in the credentials of your social apps in .env file
-- That's it - allow people to register and take quizzes!
-
-## License
-
-Basically, feel free to use and re-use any way you want.
-
----
-
-## More from our LaravelDaily Team
-
-- Read our [Daily Blog with Laravel Tutorials](https://laraveldaily.com)
-- FREE E-book: [50 Laravel Quick Tips (and counting)](https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/)
-- Check out our adminpanel generator QuickAdminPanel: [Laravel version](https://quickadminpanel.com) and [Vue.js version](https://vue.quickadminpanel.com)
-- Subscribe to our [YouTube channel Laravel Business](https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA)
-- Enroll in our [Laravel Online Courses](https://laraveldaily.teachable.com/)

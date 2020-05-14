@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bd873a34-7185-4002-b1eb-ce44c00f309c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResultsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/laraquiz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tests/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tests/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +159,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/assets/js" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -249,7 +249,21 @@
       <workItem from="1577161221706" duration="396000" />
       <workItem from="1577290897174" duration="1163000" />
       <workItem from="1577474495904" duration="392000" />
-      <workItem from="1577991032758" duration="2867000" />
+      <workItem from="1577991032758" duration="3356000" />
+      <workItem from="1578114384351" duration="277000" />
+      <workItem from="1578981258712" duration="295000" />
+      <workItem from="1579323121330" duration="891000" />
+      <workItem from="1579720752431" duration="36000" />
+      <workItem from="1579798356623" duration="219000" />
+      <workItem from="1579967027160" duration="344000" />
+      <workItem from="1580109160984" duration="759000" />
+      <workItem from="1580320815253" duration="483000" />
+      <workItem from="1580568720060" duration="226000" />
+      <workItem from="1582682300244" duration="205000" />
+      <workItem from="1583131465656" duration="63000" />
+      <workItem from="1583908816688" duration="556000" />
+      <workItem from="1589447345236" duration="2220000" />
+      <workItem from="1589451199547" duration="1373000" />
     </task>
     <servers />
   </component>

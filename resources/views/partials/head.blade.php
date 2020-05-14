@@ -36,6 +36,6 @@
 
 <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
-<meta property="og:title" content="LaraQuiz - how well do you know Laravel?" />
+<meta property="og:title" content="MKlaraquizlab-項目応答理論を用いた演習問題出題システム" />
 <meta property="og:image" content="{{ asset('laraquiz.png') }}" />
-<meta property="og:description" content="Mini-project with Laravel Quiz. Powered by QuickAdminPanel.com code generator." />
+<meta property="og:description" content="演習問題の生成をPython,データの保管をMySQL,出題システムをPHPで制作"/>

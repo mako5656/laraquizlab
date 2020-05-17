@@ -8,14 +8,15 @@
 ### 公開したアプリの URL
 [MiDe(https://knmk.jpn.org/login)
 ](https://knmk.jpn.org/login)
+
 サンプル
+
 Eメールアドレス：sample@sample.com
+
 パスワード：password
 
 ### 該当プロジェクトのリポジトリ URL
 [GitHub - mako5656/laraquizlab: laraquiz](https://github.com/mako5656/laraquizlab)
-※PHPの参考となる資料を基盤としたため0の状態から自分で作成したわけではありません。
-※先行研究はありましたがMATLAB上のコマンドで実行して使用するだけのものでしたのでプログラミング自体は0の状態から作成しました。
 
 ## 開発環境
 ### 開発環境

@@ -7,14 +7,14 @@
 研究内容：項目応答理論を用いた問題出題システムをWeb上で実装し、実際に大学生に利用してもらいアンケート調査を行いました。
 
 ### 公開したアプリの URL
-[MiDe(https://knmk.jpn.org/login)
-](https://knmk.jpn.org/login)
+[MiDe(https://xs428341.xsrv.jp)
+](https://xs428341.xsrv.jp)
 
 サンプル
 
-Eメールアドレス：sample@sample.com
+Eメールアドレス：test00000@gmail.com
 
-パスワード：password
+パスワード：test00000
 
 ### 該当プロジェクトのリポジトリ URL
 [GitHub - mako5656/laraquizlab: laraquiz](https://github.com/mako5656/laraquizlab)

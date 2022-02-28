@@ -58,7 +58,7 @@
                         datasets: [
                             {
                                 label: '受験者能力値',
-                                data:{{$sabilitys}},
+                                data:<?php echo $sabilitys;?>,
                                 borderColor: "rgba(255,0,0,1)",
                                 backgroundColor: "rgba(0,0,0,0)",
                                 lineTension: 0, // draw straightline
